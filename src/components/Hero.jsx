@@ -7,10 +7,11 @@ const HERO_BACKGROUND_URL = "https://lh3.googleusercontent.com/aida-public/AB6AX
 
 const Hero = () => {
     return (
-    <section className="relative overflow-hidden bg-background-light dark:bg-background-dark">
+    <section className="relative overflow-hidden bg-background-light dark:bg-background-dark min-h-[60vh] sm:min-h-[70vh]">
         <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `linear-gradient(to right, rgba(16, 34, 22, 0.9) 0%, rgba(16, 34, 22, 0.7) 100%), url("${HERO_BACKGROUND_URL}")` }}
+        aria-hidden="true"
         ></div>
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
         <div className="max-w-2xl text-left">

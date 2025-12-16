@@ -27,10 +27,12 @@ const categoryItems = [
 const CategoryCard = ({ title, description, imageUrl }) => (
     <a className="group relative flex flex-col overflow-hidden rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg" href="#">
     <div className="aspect-[4/3] w-full overflow-hidden bg-[#FFFFFF]">
-        <div 
-        className="h-full w-full bg-cover   bg-center transition-transform duration-500 group-hover:scale-110"
-        style={{ backgroundImage: `url("${imageUrl}")` }}
-        ></div>
+        <img
+            src={imageUrl}
+            alt={title}
+            loading="lazy"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
     </div>
     <div className="flex flex-1 flex-col justify-between p-5">
         <div>
